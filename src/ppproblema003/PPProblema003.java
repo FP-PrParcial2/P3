@@ -16,16 +16,15 @@ public class PPProblema003 {
      */
     public static void main(String[] args) {
        
-        for (int i = 0; i <= 10; i++){
-            System.out.printf("%d! = %d\n", i,
-            factorial(i));
+       long factorial=1;
+        int num;
+        Scanner numero = new Scanner(System.in);
+        System.out.print("Introduce un número: ");
+        num = numero.nextInt();
+        for (int i = num; i > 0; i--) {
+            factorial = factorial * i;
         }
-    }
-    public static long factorial(long number) {
-        if (number <= 1)
-            return 1;
-        else
-            return number * factorial(number - 1);
+        System.out.println("El factorial de " + num + " es: " + factorial);
 }
     }
     
