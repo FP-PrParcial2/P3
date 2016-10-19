@@ -16,16 +16,17 @@ public class PPProblema003 {
      */
     public static void main(String[] args) {
        
-        Scanner entrada= new Scanner(System.in);
-       System.out.println("Introduce un número");
-       int n;
-       int factorial = 1;
-        n = entrada.nextInt();
-       while ( n!=0) {
-             factorial*=n;
-             n--;
-             System.out.println("El factorial de:" + n + "es" + factorial);
+        for (int i = 0; i <= 10; i++){
+            System.out.printf("%d! = %d\n", i,
+            factorial(i));
+        }
+    }
+    public static long factorial(long number) {
+        if (number <= 1)
+            return 1;
+        else
+            return number * factorial(number - 1);
 }
     }
     
-}
+
